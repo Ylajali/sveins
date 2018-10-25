@@ -1,0 +1,157 @@
+
+<footer
+  class="
+          page-footer
+          font-small pt-4
+        {% if title == 'Home' %}
+          index-footer
+        {% endif %}
+        "
+  id="footer-container"
+
+  >
+
+
+    <div class="container-fluid text-center text-md-left">
+
+
+      <div class="row">
+
+
+        <div class="col-md-6 mt-md-0 mt-3">
+
+
+          <span>
+            KONTAKT
+          </span>
+          <p>En av Bergens tradisjonelle restauranter. Vi har vært her på Danmarksplass siden 1985 og ...</p>
+          <a href="https://www.facebook.com/pages/Sveins-Grill/178728225501942" style="text-align:center;">
+            <img src="{{ url_for('static', filename="icons/fb.png") }}" id="facebook-icon"/>
+          </a>
+
+        </div>
+
+
+        <hr class="clearfix w-100 d-md-none pb-3">
+
+
+        <div class="col-md-3 mb-md-0 mb-3">
+
+            <p class="headers">
+              KONTAKT
+            </p>
+
+          <ul class="list-unstyled" id="footer-contact">
+            <li style="text-decoration: underline; font-weight: bold;">
+              Sveins Grill
+            </li>
+            <li>
+              <a href="https://goo.gl/maps/edhmdtjWeAA2">
+                Solheimsgaten 37
+              </a>
+            </li>
+            <li>
+              5054, Bergen
+            </li>
+            <li>
+              tlf: 55 20 52 43
+            </li>
+            <li>
+              mail: Post@Sveinsgrill.no
+            </li>
+          </ul>
+
+          </div>
+
+          <div class="col-md-3 mb-md-0 mb-3">
+
+
+          <p class="headers">
+            LENKER
+          </p>
+
+
+        <ul class="nav flex-column list-unstyled" id="footer-menu">
+        {% set active_page = title %}
+          <!-- CONSUMER NAVBAR -->
+          {% set navigation_bar = [
+              ("/", "/", 'Hjem'),
+              ("/meny/middag", "/redigering/middag", 'Overtidsmat & Meny'),
+              ("/catering/forretter", "/rediger_catering/forretter", 'Catering'),
+              ('/grill', "/rediger_grill", 'Grill'),
+              ('/tjenester', "/rediger_tjenester", 'Tjenester'),
+              ('/kontakt', "/kontakt", 'Kontakt oss')
+            ] -%}
+
+
+          {% for href, edit, caption in navigation_bar %}
+
+            <li class="nav-item navigation">
+
+              <a
+                {% if caption == active_page %}
+                  class="nav-link active-footer"
+                {% else %}
+                  class="nav-link"
+                {% endif %}
+
+                {% if 'username' in session %}
+                  href="{{ edit|e }}"
+                {% else %}
+                  href="{{ href|e }}"
+                {% endif %}
+              >{{ caption|e }}</a>
+
+            </li>
+            {% endfor %}
+        </ul>
+
+
+
+          </div>
+
+
+      </div>
+
+
+    </div>
+
+
+    {% if 'username' in session %}
+
+    <div class="kontakt-container">
+      <a class="btn btn-primary log-button" href="{{ url_for('logout') }}">Logg ut</a>
+    </div>
+
+
+    {% else %}
+
+
+    <div class="copyright-container text-center py-3">
+      <a class="hide-copyright" href="" style="display: initial;" id="login-a">For ansatte</a>
+      <span class="hide-copyright ">© 2018 Copyright:</span>
+      <a href="http://tzn.tzn.no" class="hide-copyright" style="display: initial;"> Tzn.no</a>
+
+      <form action="{{url_for('login') }}" style="display: none;" id="login-form" method="post" class="footer-login">
+
+        <div class="form-row kontakt-container">
+
+            <div class="col-auto">
+              <label class="sr-only" for="brukernavn">Brukernavn</label>
+              <input type="text" class="form-control mb-2 login-input" id="brukernavn" placeholder="Brukernavn" name="username" required/>
+            </div>
+
+            <div class="col-auto">
+              <label class="sr-only" for="passord">Passord</label>
+                <input type="password" class="form-control mb-2 login-input" id="passord" placeholder="Passord" name="password" required/>
+            </div>
+
+            <div class="col-auto">
+              <button type="submit" class="btn btn-primary mb-2 log-button">Logg inn</button>
+            </div>
+
+        </div>
+      </form>
+    </div>
+    {% endif %}
+  </footer>

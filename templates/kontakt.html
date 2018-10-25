@@ -1,0 +1,262 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+  <div class="row">
+
+    <div class="col-lg-3">
+
+      <table class="table">
+
+        <th
+          class="
+                  headers
+                "
+          colspan="2"
+          >Kontaktinformasjon
+        </th>
+
+        <tr>
+          <td
+            class="
+                    font-weight-bold
+                    text-decoration-underline
+                  "
+            colspan="2"
+            align="center"
+            >Sveins Grill
+          </td>
+        </tr>
+
+        <tr>
+          <td
+            class="
+                    no-border-top
+                  "
+            colspan="2"
+            align="center"
+            >Solheimsgaten 37
+          </td>
+        </tr>
+
+        <tr>
+          <td
+            class="
+                    no-border-top
+                  "
+            colspan="2"
+            align="center"
+            >5054, Bergen
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            Telefon:
+          </td>
+          <td>
+            55 29 52 43
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            E-mail:
+          </td>
+          <td>
+            Post@Sveinsgrill.no
+          </td>
+        </tr>
+
+        <tr>
+          <td
+            style="text-align:center;"
+            colspan="2">
+
+            <a
+              href="https://www.facebook.com/pages/Sveins-Grill/178728225501942"
+            >
+
+              <img
+                src="{{ url_for('static', filename="icons/fb.png") }}"
+                id="facebook-icon-contact"
+                alt="Facebook Icon"
+              />
+            </a>
+          </td>
+        </tr>
+
+      </table>
+    </div>
+
+    <div class="col-lg-3 open-hours">
+      <table class="table">
+
+        <tr>
+          <th
+            class="
+                    headers
+                    kontakt-subtitle
+                  "
+            colspan="2"
+            >Åpningstider
+          </th>
+        </tr>
+
+        <tr>
+          <td>Mandag - Fredag</td>
+          <td>11:00-19:00</td>
+        </tr>
+
+        <tr>
+          <td>Lørdag</td>
+          <td>Kun på bestilling.</td>
+        </tr>
+
+        <tr>
+          <td>Søndag</td>
+          <td>Kun på bestilling.</td>
+        </tr>
+
+        <tr>
+          <td
+            colspan="2"
+            align="center"
+            >* Catering er åpen hele uken.
+          </td>
+        </tr>
+
+      </table>
+    </div>
+
+
+
+    <div class="col-lg-6 kontakt-skjema">
+
+      <h3
+        class="
+                kontakt-subtitle
+              "
+        >Kontaktskjema
+      </h3>
+
+      <form action="{{ url_for('send') }}" method="post">
+
+        <div class="form-group">
+
+          <!-- NAME -->
+          <div class="col">
+            <input
+              class="
+                      form-control
+                      input
+                      contact
+                    "
+              type="text"
+              required
+              placeholder="Navn"
+              name="name"
+            />
+          </div>
+
+          <!-- EMAIL -->
+          <div class="col">
+            <input
+              class="
+                      form-control
+                      input
+                      contact
+                    "
+              type="email"
+              required
+              placeholder="Email"
+              name="email"
+            />
+          </div>
+
+
+          <!-- TLF NUMBER -->
+          <div class="col">
+            <input
+              class="
+                      form-control
+                      input
+                      contact
+                    "
+              type="text"
+              required
+              placeholder="Telefonnummer"
+              name="number"
+            />
+          </div>
+
+          <!-- MESSAGE -->
+          <div class="col">
+            <textarea
+              class="
+                      form-control
+                      input
+                      contact
+                    "
+              required
+              placeholder="Melding"
+              rows="5"
+              name="body"
+            ></textarea>
+          </div>
+
+          <!-- SUBMIT -->
+          <div class="col">
+            <button
+              class="
+                      btn
+                      send-button
+                    "
+              >Send!
+            </button>
+          </div>
+
+        </div>
+
+      </form>
+
+    </div>
+
+
+
+
+    <div
+      class="col-12"
+      id="map">
+
+    </div>
+    <script>
+    var map;
+    function initMap() {
+      map = new google.maps.Map(document.getElementById('map'), {
+        center: {lat: 60.3749113, lng: 5.3387492},
+        zoom: 18,
+        mapTypeId: 'satellite'
+      });
+
+      var marker = new google.maps.Marker({
+        position: {lat: 60.3749113, lng: 5.3387492},
+        title: "Sveins Grill"
+      });
+
+      marker.setMap(map);
+    }
+
+
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=
+AIzaSyBN0_fI1eP8rX9vnORx2YG-cfA7AEzp15U
+&callback=initMap">
+    </script>
+
+
+
+  </div>
+
+</div>
+{% endblock %}

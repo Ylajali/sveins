@@ -1,0 +1,327 @@
+{% for item in headers %}
+
+
+<div class="col-lg-6 edit-container">
+
+
+  <!-- KOLDTBORD EDIT FORM -->
+  <!-- KOLDTBORD EDIT FORM -->
+  <!-- KOLDTBORD EDIT FORM -->
+  <form action="{{ url_for('edit_koldtbord_headers', id=item.id) }}" method="post" class="border-bottom m-4">
+
+
+
+    <!-- HEADER ITEMS -->
+    <div class="form-group row edit_form head-container">
+
+      <!-- REDIGER BUTTON -->
+      <div class="col-lg-2">
+        <button
+          class="
+                  edit-buttons
+                  show-hide
+                "
+          id="koldtbord-header-rediger"
+          data-selector=".head-container"
+          data-border="false"
+
+          >rediger</button>
+      </div>
+
+      <!-- NAME -->
+      <div class="col-10">
+        <div class="form-group row head-container">
+
+          <div class="col">
+            <input class="
+                      form-control-plaintext
+                      hidden-input
+                      edit-name
+                      "
+              value="{{ item.name }}"
+              type="text"
+              readonly
+              required name="name" />
+          </div>
+
+        </div>
+
+        <!-- PRICE -->
+        <div class="form-group">
+          <input class="
+                      form-control-plaintext
+                      hidden-input
+                      edit-price
+                    " value="{{ item.price }}" type="text" readonly required name="price">
+        </div>
+
+
+        <!-- BUTTONS -->
+
+        <!-- SUBMIT -->
+        <button class="
+                    btn
+                    btn-link
+                    hidden
+                    submit-button
+                  " type="submit">submit
+        </button>
+
+        <!-- RESET -->
+        <button class="
+                      btn
+                      btn-link
+                      hidden
+                      reset-button
+                  " type="reset">reset
+        </button>
+      </form>
+
+    </div>
+  </div>
+
+
+  {% for item in find_id(item.id) %}
+  <!-- EDIT FORM -->
+  <div class="col-lg-12">
+
+
+    <!-- KOLDTBORD SUB FORM -->
+    <!-- KOLDTBORD SUB FORM -->
+    <!-- KOLDTBORD SUB FORM -->
+    <form action="{{ url_for('edit_koldtbord', id=item.id)}}" method="post" class="submit-form">
+
+
+
+      <!-- ITEMS -->
+      <div class="form-group row edit_form sub-container">
+
+        <!-- REDIGER BUTTON -->
+        <div class="col-lg-2">
+            <button
+              class="
+                      edit-buttons
+                      show-hide
+                    "
+              data-selector=".sub-container"
+              >rediger</button>
+        </div>
+
+
+        <div class="col-lg-10">
+          <div class="form-group row header-container">
+
+          <!-- NAME -->
+          <div class="col">
+            <input
+              class="
+                      form-control-plaintext
+                      hidden-input
+                      edit-name
+                      sub-header
+                    "
+              name="name"
+              value="{{ item.name }}"
+              readonly required
+              type="text"
+             />
+          </div>
+
+          </div>
+
+
+        <!-- DESCRIPTION -->
+        <div>
+          <textarea
+            class="
+                    form-control-plaintext
+                    hidden-input
+                    edit-description
+                    sub-description
+                  "
+            rows="2"
+            type="text"
+            readonly required
+            name="description"
+          >{{ item.description }}</textarea>
+        </div>
+
+
+
+
+      <!-- BUTTONS -->
+
+      <div class="row">
+        <!-- SUBMIT -->
+          <button
+            class="
+                    btn
+                    btn-link
+                    hidden
+                    submit-button
+                  "
+            type="submit"
+            >submit
+          </button>
+
+          <!-- RESET -->
+          <button
+            class="
+                    btn
+                    btn-link
+                    hidden
+                    reset-button
+                  "
+            type="reset"
+            >reset
+          </button>
+
+
+        <!-- FOR REDIRECT -->
+        <input class="form-control input" type="text" name="type" value="{{ type }}" style="display: none;" />
+
+
+
+      </form>
+
+      <!-- DELETE ITEM FORM -->
+      <!-- DELETE ITEM FORM -->
+      <!-- DELETE ITEM FORM -->
+      <form action="{{ url_for('delete_koldtbord', id=item.id )}}" method="post" class="delete-form">
+
+        <!-- MAIN BUTTON -->
+        <button
+          class="
+                  btn
+                  btn-link
+                  hidden
+                  delete-button
+                "
+          type="button"
+          >slett
+        </button>
+
+        <p class="usure">sikker?</p>
+
+        <!-- YES -->
+        <button
+          class="
+                  btn
+                  btn-link
+                  yes-no
+                "
+          value="yes"
+          >Ja
+        </button>
+
+        <!-- NO -->
+        <button
+          class="
+                  btn
+                  btn-link
+                  yes-no
+                  no
+                "
+          >Nei
+        </button>
+
+        <!-- GET TYPE -->
+        <input class="form-control input" type="text" name="type" value="{{ type }}" style="display: none;" />
+      </form>
+    </div>
+
+    </div>
+  </div>
+  </div>
+  {% endfor %}
+
+  <!-- ADD ITEM FORM -->
+  <!-- ADD ITEM FORM -->
+  <!-- ADD ITEM FORM -->
+  <div class="col-lg-12">
+
+    <!-- LEGG TIL BUTTON -->
+    <button class="
+                  add-items
+                  add-button
+                ">Legg til
+    </button>
+
+
+    <form class="add-items-form" action="{{ url_for('new_koldtbord') }}" method="post" style="display: none;">
+
+  <div class="form-group">
+
+      <!-- NAME -->
+
+      <div class="col">
+
+        <input
+          class="
+                  form-control
+                  input
+                "
+          type="text"
+          required
+          name="name"
+          placeholder="Navn"
+        />
+      </div>
+  </div>
+
+      <!-- DESCRIPTION -->
+      <div class="form-group row">
+        <textarea
+          class="
+                  form-control
+                  input
+                "
+          rows="1"
+          required
+          name="description"
+          placeholder="Forklaring"
+        ></textarea>
+      </div>
+
+  <div class="form-group row">
+
+
+      <!-- SUBMIT -->
+      <button class="
+                    btn
+                    submit-new
+                  " type="submit">Legg til i meny
+      </button>
+
+      <!-- RESET -->
+      <button class="
+                    btn
+                    btn-link
+                  " type="reset">Reset
+      </button>
+
+      <!-- CANCEL -->
+      <button class="
+                    btn
+                    btn-link
+                    cancel-new
+                  " type="button">Cancel
+      </button>
+
+      <!-- DESSERT -->
+      <div class="custom-control custom-checkbox m-2">
+        <input type="checkbox" class="custom-control-input" id="{{ item.id }}" name="dessert" value="True">
+        <label class="custom-control-label" for="{{ item.id }}">Kryss hvis dessert (for riktig rekkefølge)</label>
+      </div>
+
+
+      <!-- REDIRECT (?) -->
+      <input style="display: none" value="{{ item.id }}" name="koldtbord_id" />
+  </div>
+
+
+    </form>
+  </div>
+
+</div>
+{% endfor %}

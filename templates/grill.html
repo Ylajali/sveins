@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+{% set active_page = "grill" %}
+
+{% block body %}
+
+  <div class="row">
+  {% for item in headers %}
+    <div class="col-lg-4 subcontainer">
+      <table>
+        <tr>
+          <th class="headers border-bottom">
+          {% filter upper %}
+            {{ item.name }}
+          {% endfilter %}
+          </th>
+          <td class="prices border-bottom">
+            {{ item.price }}
+          </td>
+        </tr>
+
+
+        {% for item in find_id_grill(item.id) %}
+        <tr>
+          <td class="descriptions">
+            - {{ item.name }}
+          </td>
+        </tr>
+        {% endfor %}
+      </table>
+    </div>
+
+
+
+  {% endfor %}
+  </div>
+
+</div>
+{% endblock %}

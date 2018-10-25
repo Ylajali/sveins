@@ -1,0 +1,215 @@
+{% extends "layout.html" %}
+{% set active_subpage = type %}
+
+{% block body %}
+
+  <!-- SUBNAV & JINJA ACTIVE -->
+  {% set navigation_bar = [
+  ('forretter', 'Forretter'),
+  ('hovedretter', 'Hovedretter'),
+  ('snitter', 'Snitter'),
+  ('dessert', 'Dessert'),
+  ('kaker', 'Kaker'),
+  ('koldtbord', 'Koldtbord'),
+  ] -%}
+
+  <ul class="nav justify-content-center headmenu">
+
+    {% for id, caption in navigation_bar %}
+    <li class="nav-item navigation">
+      <a {% if id==active_subpage %} class="nav-link meny-link active" {% else %} class="nav-link meny-link" {% endif %} href="{{ url_for('rediger_catering', type=id) }}">
+        {{ caption }}
+      </a>
+    </li>
+    {% endfor %}
+
+  </ul>
+
+
+
+  <div class="row">
+    {% if type == "koldtbord" %}
+
+    {% include "edit_koldtbord.html" %}
+
+    {% else %}
+
+    {% for item in types %}
+    <!-- CATERING EDIT FORM -->
+    <!-- CATERING EDIT FORM -->
+    <!-- CATERING EDIT FORM -->
+    <div class="col-lg-6 edit-container">
+
+
+      <!-- INPUTS -->
+      <form action="{{ url_for('edit_catering', id=item.id) }}" method="post">
+
+
+        <div class="form-group row edit_form">
+
+          <div class="col-lg-2">
+            <!-- REDIGER BUTTON -->
+            <button
+              class="
+                      edit-buttons
+                      show-hide
+                    "
+              data-selector=".edit-container"
+              data-border="true"
+
+              >rediger</button>
+          </div>
+
+          <div class="col-lg-10">
+
+            <div class="form-group row border-bottom header-container">
+
+              <!-- NAME -->
+              <div class="col-lg-8">
+                <input class="
+                          form-control-plaintext
+                          hidden-input
+                          edit-name
+                        " type="text" value="{{ item.name }}" readonly required name="name" />
+              </div>
+
+              <!-- PRICE -->
+              <div class="col-lg-4">
+                <input
+                  class="
+                          form-control-plaintext
+                          hidden-input
+                          edit-price
+                        "
+                  type="text"
+                  value="{{ item.price_one }}"
+                  readonly required
+                  name="price"
+                />
+              </div>
+
+            </div>
+
+            <!-- DESCRIPTION -->
+            <div>
+              <textarea
+              class="
+                      form-control-plaintext
+                      hidden-input
+                      descriptions
+                    "
+                rows="2"
+                readonly required name="description"
+              >{{ item.description }}</textarea>
+            </div>
+
+            {% include "submit-buttons.html" %}
+          </div>
+
+
+
+      </form>
+
+
+    </div>
+
+  </div>
+
+</div>
+{% endfor %}
+
+
+
+<!-- ADD ITEM -->
+<!-- ADD ITEM -->
+<!-- ADD ITEM -->
+<div class="col-lg-6">
+
+  <!-- LEGG TIL BUTTON -->
+  <button
+    class="
+            add-items
+            add-button
+          "
+    >Legg til
+  </button>
+
+
+  <form class="add-items-form" action="{{ url_for('new') }}" method="post" style="display: none;">
+
+    <div class="form-group row">
+
+      <!-- NAME -->
+      <div class="col">
+        <input
+          class="
+                  form-control
+                  input
+                "
+          type="text"
+          required
+          name="name"
+          placeholder="Navn"
+        />
+      </div>
+
+      <!-- PRICE -->
+      <div class="col-lg-5 col">
+        <input
+          class="
+                  form-control
+                  input
+                "
+          type="text"
+          required
+          name="price"
+          placeholder="Pris"
+        />
+      </div>
+    </div>
+
+    <!-- DECRIPTION -->
+    <div>
+      <textarea class="
+                    form-control
+                    input
+                  " rows="2" required name="description" placeholder="Forklaring"></textarea>
+    </div>
+
+    <!-- SUBMIT -->
+    <button class="
+                  btn
+                  btn-link
+                " type="submit">Submit
+    </button>
+
+    <!-- RESET -->
+    <button class="
+                  btn
+                  btn-link
+                " type="reset">Reset
+    </button>
+
+    <!-- CANCEL -->
+    <button class="
+                  btn
+                  btn-link
+                  cancel-new
+                " type="button">Cancel
+    </button>
+
+    <!-- REDIRECTION PURPOSES -->
+    <input type="text" name="type" value="{{ type }}" style="display: none;" />
+
+
+  </form>
+
+</div>
+{% endif %}
+<!-- ROW -->
+</div>
+
+
+<!-- CONTAINER -->
+</div>
+{% endblock %}

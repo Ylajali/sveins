@@ -1,0 +1,117 @@
+{% extends "layout.html" %}
+{% set active_subpage = type %}
+
+{% block body %}
+
+  {% set navigation_bar = [
+      ('forretter', 'Forretter'),
+      ('hovedretter', 'Hovedretter'),
+      ('snitter', 'Snitter'),
+      ('dessert', 'Dessert'),
+      ('kaker', 'Kaker'),
+      ('koldtbord', 'Koldtbord')
+    ] -%}
+
+  <ul class="nav justify-content-center headmenu">
+
+      {% for id, caption in navigation_bar %}
+
+        <li class="nav-item navigation">
+
+          <a
+            {% if id == active_subpage %}
+              class="nav-link active"
+            {% else %}
+              class="nav-link meny-link"
+            {% endif %}
+
+            href="{{ url_for('catering', type=id) }}"
+          >{{ caption }}</a>
+
+        </li>
+      {% endfor %}
+  </ul>
+
+
+  <div class="row">
+{% if type == "koldtbord" %}
+  {% for item in headers %}
+
+<div class="col-lg-4 subcontainer">
+  <table class="koldtbord-table">
+    <tr>
+      <th class="headers koldtbord-header">
+        {{ item.name }}
+      </th>
+    </tr>
+
+
+        {% for item in find_id(item.id) %}
+      <tr>
+        <td>
+
+          <span  class="subheaders">{{ item.name }}</span>
+          <span class="descriptions koldtbord-descriptions">{{ item.description }}</span>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="koldtbord-divider">
+          &#9826;&#9826;
+          </td>
+      </tr>
+        {% endfor %}
+
+
+    <tr>
+      <td class="koldtbord-price">
+        <br />
+        {{ item.price }}
+      </td>
+    </tr>
+</table>
+</div>
+
+  {% endfor %}
+
+
+{% else %}
+
+{% for item in types %}
+  <div class="col-lg-6 tables subcontainer">
+
+    <table class="menu_table">
+
+      <tr>
+
+        <!-- NAME -->
+        <th class="headers border-bottom">
+          {{ item.name }}
+        </th>
+
+        <!-- PRICE -->
+        <td class="prices border-bottom">
+          {{ item.price_one }}
+        </td>
+
+      </tr>
+
+      <tr>
+        <!-- DESCRIPTION -->
+        <td class="descriptions" colspan="2">
+          {{ item.description }}
+        </td>
+
+      </tr>
+
+
+    </table>
+
+  </div>
+{% endfor %}
+
+{% endif %}
+  </div>
+
+</div>
+{% endblock %}

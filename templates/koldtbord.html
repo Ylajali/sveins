@@ -1,0 +1,40 @@
+  {% for item in headers %}
+
+
+
+<div class="col-lg-6 subcontainer">
+  <table>
+    <tr>
+      <th class="headers border-bottom">
+      {% filter upper %}
+        {{ item.name }}
+      {% endfilter %}
+      </th>
+    </tr>
+
+
+        {% for item in find_id(item.id) %}
+      <tr>
+        <td class="subheaders">
+
+          {{ item.name }}
+
+        </td>
+      </tr>
+      <tr>
+        <td class="descriptions">
+          {{ item.description }}
+        </td>
+      </tr>
+        {% endfor %}
+
+
+    <tr>
+      <td class="prices">
+        {{ item.price }}
+      </td>
+    </tr>
+</table>
+</div>
+
+  {% endfor %}

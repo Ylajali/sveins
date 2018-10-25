@@ -1,0 +1,129 @@
+{% extends "layout.html" %}
+{% set active_subpage = type %}
+
+{% block body %}
+
+  <!-- SUBNAV & JINJA ACTIVE -->
+  {% set navigation_bar = [
+      ('middag', 'Middag'),
+      ('pizza', 'Pizza'),
+      ('hamburger', 'Hamburger'),
+      ('diverse', 'Diverse'),
+    ] -%}
+  <ul class="nav justify-content-center subnav-container">
+
+  {% for id, caption in navigation_bar %}
+    <li class="nav-item navigation">
+      <a
+        {% if id == active_subpage %}
+          class="nav-link active"
+        {% else %}
+          class="nav-link meny-link"
+        {% endif %}
+          href="{{ url_for('find_item', item=id) }}">
+        {{ caption }}
+      </a>
+    </li>
+  {% endfor %}
+
+
+  </ul>
+
+  <!-- DAGENS -->
+  {% if dagens is not none %}
+  <h4 id="dagens">Dagens: <span id="dagens-description">{{ dagens }}</span></h4>
+  {% else %}
+  {% endif %}
+
+
+  <!-- MENU START -->
+  <div class="row">
+  {% for item in items %}
+
+  {% if item.type == "pizza"  %}
+    <!-- PIZZA MENU -->
+    <div class="col-lg-6 tables subcontainer">
+
+      <table class="menu_table">
+
+        <tr>
+          <!-- NAME -->
+          <th
+            class="
+                    headers
+                    meny-name-pizza
+                    border-bottom
+                  "
+            >{{ item.name }}
+          </th>
+          <!-- PRICE -->
+          <td
+            class="
+                    meny-price-pizza
+                    border-bottom
+                  "
+            >{{ item.price }}
+          </td>
+        </tr>
+
+        <!-- DESCRIPTION -->
+        <tr>
+          <td
+            class="
+                    descriptions
+                  "
+            colspan="2"
+            >{{ item.description }}
+          </td>
+        </tr>
+
+      </table>
+    </div>
+
+  {% else %}
+    <!-- NORMAL MENU -->
+    <div class="col-lg-6 tables subcontainer">
+      <table class="menu_table">
+
+        <tr>
+          <!-- NAME -->
+          <th
+            class="
+                    headers
+                    border-bottom
+                  "
+            >{{ item.name }}
+          </th>
+
+          <!-- PRICE -->
+          <td
+            class="
+                    prices
+                    border-bottom
+                  "
+            >{{ item.price }}
+          </td>
+        </tr>
+
+        <!-- DESCRIPTION -->
+        <tr>
+          <td
+            class="
+                    descriptions
+                  "
+            colspan="2"
+            >{{ item.description }}
+          </td>
+        </tr>
+
+      </table>
+    </div>
+  {% endif %}
+{% endfor %}
+
+
+  </div>
+</div>
+
+
+{% endblock %}

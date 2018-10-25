@@ -1,0 +1,12 @@
+      {% for id, caption in navigation_bar %}
+        <li class="nav-item navigation">
+          <a
+            {% if id == active_page %}
+              class="nav-link meny-link active"
+            {% else %}
+              class="nav-link meny-link"
+            {% endif %} href="{{ url_for('find_item', item=id) }}">
+            {{ caption }}
+          </a>
+        </li>
+      {% endfor %}
