@@ -118,6 +118,46 @@ $azure: #0e429e;
   100% {
     opacity: 1; } }
 
+@media (max-width: 992px) {
+  .index-buttons {
+    font-size: 1em;
+    color: black;
+    background-color: transparent;
+    border: 1px black solid;
+    border-radius: 2px;
+    font-family: 'Roboto',sans-serif;
+    transition: all 0.2s;
+    width: 90%;
+    height: 3rem;
+    cursor: pointer;
+    border: 1px white solid;
+    color: white;
+    transition: background-color 0.5s ease;
+    display: block;
+    margin: auto;
+    z-index: 2; }
+    .index-buttons:hover {
+      background-color: black;
+      color: white; }
+    .index-buttons:active {
+      background-color: white;
+      color: black;
+      box-shadow: 0px 0px 7px #0f5094; }
+    .index-buttons:focus {
+      color: black;
+      background-color: transparent;
+      box-shadow: 0px 0px 4px #0f5094; }
+    .index-buttons:hover {
+      background-color: rgba(0, 0, 0, 0.1); }
+    .index-buttons:active {
+      background-color: white;
+      color: black;
+      box-shadow: 0px 0px 7px #d53e62; }
+    .index-buttons:focus {
+      color: white;
+      background-color: transparent;
+      box-shadow: 0px 0px 7px #d53e62; } }
+
 @media (max-width: 768px) {
   #index-logo {
     width: 100%;
@@ -165,8 +205,7 @@ $azure: #0e429e;
   .small-screen {
     display: block;
     margin: 0em auto 0em auto;
-    width: 88%;
-    z-index: -2; }
+    width: 88%; }
   .index-image-container {
     display: block;
     margin: 1em auto 100px auto; }
