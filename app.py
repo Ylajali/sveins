@@ -16,13 +16,7 @@ app = Flask(__name__)
 # EMAIL
 # EMAIL
 # EMAIL
-app.config['MAIL_SERVER'] = 'send.one.com'
-app.config['MAIL_PORT'] = 587
-app.config['MAIL_USERNAME'] = 'thamuzz@brigade.no'
-app.config['MAIL_PASSWORD'] = '3v3n8w'
-app.config['MAIL_USE_TLS'] = True
-app.config['MAIL_USE_SSL'] = False
-mail = Mail(app)
+
 
 # Configure session to use filesystem
 app.config["SESSION_PERMANENT"] = False
