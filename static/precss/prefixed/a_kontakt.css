@@ -1,0 +1,134 @@
+/* COLORS */
+/* COLORS */
+/* COLORS */
+/* COLORS */
+/*
+$grape: #7023BE;
+$azure: #0e429e;
+*/
+/* FONTS */
+/* FONTS */
+/* FONTS */
+/* FONTS */
+/* SIZES */
+/* SIZES */
+/* SIZES */
+/* SIZES */
+/* TOOLS */
+/* TOOLS */
+/* TOOLS */
+/* TOOLS */
+/* INPUTS */
+/* INPUTS */
+/* INPUTS */
+/* INPUTS */
+/* TEXTS */
+/* TEXTS */
+/* TEXTS */
+/* TEXTS */
+/* BUTTONS */
+/* BUTTONS */
+/* BUTTONS */
+/* BUTTONS */
+/* INCLUDES */
+/* INCLUDES */
+/* INCLUDES */
+/* INCLUDES */
+.kontakt-title {
+  font-family: "Unica One", cursive;
+  font-size: 3em;
+  color: #0f5094;
+  cursor: default;
+  margin-top: 18px;
+  /*
+  width: max-content;
+  */
+  margin-right: auto;
+  margin-left: auto; }
+
+.kontakt-subtitle {
+  font-family: "Unica One", cursive;
+  font-size: 1.6em;
+  color: black; }
+
+.send-button {
+  font-size: 1em;
+  color: black;
+  background-color: transparent;
+  border: 1px black solid;
+  border-radius: 2px;
+  font-family: 'Roboto',sans-serif;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s; }
+  .send-button:hover {
+    background-color: black;
+    color: white; }
+  .send-button:active {
+    background-color: white;
+    color: black;
+    -webkit-box-shadow: 0px 0px 7px #0f5094;
+    box-shadow: 0px 0px 7px #0f5094; }
+  .send-button:focus {
+    color: black;
+    background-color: transparent;
+    -webkit-box-shadow: 0px 0px 4px #0f5094;
+    box-shadow: 0px 0px 4px #0f5094; }
+
+/* HEADTITLE */
+/* HEADTITLE */
+/* HEADTITLE */
+/* HEADTITLE */
+.kontakt-title {
+  margin-top: 18px;
+  margin-bottom: 40px; }
+
+/* CONTACT INFO */
+/* CONTACT INFO */
+/* CONTACT INFO */
+/* CONTACT INFO */
+.kontakt-subtitle {
+  text-align: center; }
+
+.kontakt-info {
+  padding-bottom: 80px; }
+
+#facebook-icon-contact {
+  width: 50px; }
+
+/* OPENING HOURS */
+/* OPENING HOURS */
+/* OPENING HOURS */
+/* OPENING HOURS */
+/* CONTACT FORM */
+/* CONTACT FORM */
+/* CONTACT FORM */
+/* CONTACT FORM */
+.send-button {
+  width: 30%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+
+.kontakt-skjema {
+  padding: 30px;
+  padding-top: 0px;
+  padding-bottom: 50px; }
+
+.contact {
+  margin: 5px; }
+
+/* GOOGLE MAP */
+/* GOOGLE MAP */
+/* GOOGLE MAP */
+/* GOOGLE MAP */
+#map {
+  height: 400px;
+  border: 1px white solid; }
+
+/* SMALL SCREEN ONLY */
+/* SMALL SCREEN ONLY */
+/* SMALL SCREEN ONLY */
+/* SMALL SCREEN ONLY */
+@media screen and (max-width: 960px) {
+  .open-hours {
+    padding-bottom: 80px; } }

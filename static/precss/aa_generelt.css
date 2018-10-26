@@ -1,0 +1,231 @@
+/* COLORS */
+/* COLORS */
+/* COLORS */
+/* COLORS */
+/*
+$grape: #7023BE;
+$azure: #0e429e;
+*/
+/* FONTS */
+/* FONTS */
+/* FONTS */
+/* FONTS */
+/* SIZES */
+/* SIZES */
+/* SIZES */
+/* SIZES */
+/* TOOLS */
+/* TOOLS */
+/* TOOLS */
+/* TOOLS */
+/* INPUTS */
+/* INPUTS */
+/* INPUTS */
+/* INPUTS */
+/* TEXTS */
+/* TEXTS */
+/* TEXTS */
+/* TEXTS */
+/* BUTTONS */
+/* BUTTONS */
+/* BUTTONS */
+/* BUTTONS */
+body {
+  background-repeat: repeat;
+  background-image: url("/static/img/stardust_light.png");
+  overflow: scroll; }
+
+.active-header {
+  font-size: 1.1em;
+  font-family: "Unica One", cursive;
+  animation: hover-colors 4s ease infinite;
+  text-decoration: underline;
+  pointer-events: none; }
+  .active-header:hover {
+    text-decoration: underline; }
+
+@keyframes hover-colors {
+  from, to {
+    color: #0f5094; }
+  50% {
+    color: #481da3; } }
+
+.active {
+  border-top: 1px black solid;
+  font-family: "Unica One", cursive;
+  color: black;
+  font-size: 1.1em;
+  padding: 12px 17px;
+  margin: auto;
+  margin-bottom: 60px;
+  animation: hover-colors 4s ease infinite;
+  text-decoration: underline; }
+  .active:hover {
+    text-decoration: underline; }
+
+/* GLOBALS */
+/* GLOBALS */
+/* GLOBALS */
+/* GLOBALS */
+/* HORZONTAL, VERTICAL, BLUR, COLOR */
+.headtitle {
+  text-shadow: 0px 2px 0px #ffffff, 1px 3px 0px #1b1b1b; }
+
+.hidden {
+  display: none; }
+
+.yes-no {
+  display: none; }
+
+.text-decoration-underline {
+  text-decoration: underline; }
+
+.no-border-top {
+  border-top: none !important; }
+
+.no-border-bottom {
+  border-bottom: none !important; }
+
+.border-bottom {
+  border-bottom: 1px black solid !important; }
+
+/* ELEMENTS */
+/* ELEMENTS */
+/* ELEMENTS */
+/* ELEMENTS */
+td {
+  color: black; }
+
+label {
+  color: black; }
+
+span {
+  color: black; }
+
+p {
+  color: black; }
+
+th {
+  font-weight: normal;
+  color: black; }
+
+a {
+  color: black; }
+  a:hover {
+    color: #0f5094; }
+
+/* DEFAULT CLASSES */
+/* DEFAULT CLASSES */
+/* DEFAULT CLASSES */
+/* DEFAULT CLASSES */
+.subcontainer {
+  padding: 10px 5px;
+  margin-bottom: 10px;
+  cursor: default; }
+
+.headers {
+  font-family: "Unica One", cursive;
+  font-size: 1.6em;
+  color: black; }
+
+.subheaders {
+  font-family: "Unica One", cursive;
+  font-size: 1.3em;
+  color: black; }
+
+.descriptions {
+  font-family: "Reenie Beanie", cursive;
+  font-size: 1.7em;
+  color: black;
+  margin-top: 10px;
+  line-height: 1em; }
+
+.prices {
+  font-family: "Unica One", cursive;
+  font-size: 1.2em;
+  font-style: italic;
+  text-align: right;
+  color: black; }
+
+.hidden-input {
+  color: black; }
+  .hidden-input.placeholder {
+    color: transparent; }
+  .hidden-input:-moz-placeholder {
+    color: transparent; }
+  .hidden-input::-moz-placeholder {
+    color: transparent; }
+  .hidden-input::-webkit-input-placeholder {
+    color: transparent; }
+  .hidden-input:active {
+    color: black; }
+
+.input {
+  color: black;
+  border-radius: 2px;
+  background-color: white;
+  border: 1px black solid; }
+  .input.placeholder {
+    color: #b3b3b3; }
+  .input:-moz-placeholder {
+    color: #b3b3b3; }
+  .input::-moz-placeholder {
+    color: #b3b3b3; }
+  .input::-webkit-input-placeholder {
+    color: #b3b3b3; }
+  .input:active {
+    color: black;
+    background: white; }
+
+/* BIG SCREEN ONLY */
+/* BIG SCREEN ONLY */
+/* BIG SCREEN ONLY */
+/* BIG SCREEN ONLY */
+@media screen and (min-width: 960px) {
+  .lg-only {
+    display: initial;
+    font-size: 0.5em;
+    vertical-align: middle;
+    color: #0f5094; } }
+
+/* SMALL SCREEN ONLY */
+/* SMALL SCREEN ONLY */
+/* SMALL SCREEN ONLY */
+/* SMALL SCREEN ONLY */
+@media screen and (max-width: 960px) {
+  .lg-only {
+    display: none; } }
+
+/* TRANSITIONS */
+/* TRANSITIONS */
+/* TRANSITIONS */
+/* TRANSITIONS */
+.transition-container {
+  position: fixed;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  z-index: 998;
+  pointer-events: none; }
+
+.transition {
+  width: 100%;
+  height: calc(100% + 100px);
+  position: relative;
+  bottom: 150%;
+  background: linear-gradient(70deg, #0f5094, #d53e62);
+  z-index: 999;
+  overflow: hidden;
+  transform: scale(1.2);
+  background-size: 150% 150%; }
+
+.transition-info-container {
+  width: 100%;
+  height: calc(100% + 100px);
+  position: relative;
+  left: 100%; }
+
+@media (max-width: 576px) {
+  .headtitle {
+    word-wrap: break-word;
+    width: 100%; } }

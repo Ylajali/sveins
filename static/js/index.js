@@ -140,7 +140,12 @@ $(document).ready(function () {
     var current_url = window.location.href;
     var find_two = current_url.split("/");
 
-    if (find[3] === "") {
+    if (find[3] !== "") {
+      $('.transition')
+      .css({
+        bottom: "150%"
+      });
+    } else {
       $('.transition')
       .css({
         bottom: "0%"

@@ -1,0 +1,120 @@
+/* COLORS */
+/* COLORS */
+/* COLORS */
+/* COLORS */
+/*
+$grape: #7023BE;
+$azure: #0e429e;
+*/
+/* FONTS */
+/* FONTS */
+/* FONTS */
+/* FONTS */
+/* SIZES */
+/* SIZES */
+/* SIZES */
+/* SIZES */
+/* TOOLS */
+/* TOOLS */
+/* TOOLS */
+/* TOOLS */
+/* INPUTS */
+/* INPUTS */
+/* INPUTS */
+/* INPUTS */
+/* TEXTS */
+/* TEXTS */
+/* TEXTS */
+/* TEXTS */
+/* BUTTONS */
+/* BUTTONS */
+/* BUTTONS */
+/* BUTTONS */
+/* INCLUDES */
+.koldtbord-header {
+  font-family: "Unica One", cursive;
+  font-size: 1.6em;
+  color: black; }
+
+.koldtbord-price {
+  font-family: "Unica One", cursive;
+  font-size: 1.2em;
+  font-style: italic;
+  text-align: right;
+  color: black; }
+
+.koldtbord-subheader {
+  font-family: "Unica One", cursive;
+  font-size: 1.6em;
+  color: black; }
+
+.koldtbord-subdescription {
+  font-family: "Reenie Beanie", cursive;
+  font-size: 1.7em;
+  color: black;
+  margin-top: 10px;
+  line-height: 1em; }
+
+/* TEXTS */
+/* TEXTS */
+/* TEXTS */
+/* TEXTS */
+.koldtbord-header {
+  text-align: center;
+  text-decoration: underline; }
+
+.koldtbord-subdescription {
+  display: block;
+  margin-top: -17px;
+  margin-bottom: 3px; }
+
+.koldtbord-price {
+  text-align: center;
+  font-size: 1.1em;
+  color: #0f5094; }
+
+/* EDIT */
+/* EDIT */
+/* EDIT */
+/* EDIT */
+#koldtbord-header-rediger {
+  font-size: 1em;
+  color: black;
+  background-color: transparent;
+  border: 1px black solid;
+  border-radius: 2px;
+  font-family: 'Roboto',sans-serif;
+  transition: all 0.2s;
+  height: 60px; }
+  #koldtbord-header-rediger:hover {
+    background-color: black;
+    color: white; }
+  #koldtbord-header-rediger:active {
+    background-color: white;
+    color: black;
+    box-shadow: 0px 0px 7px #0f5094; }
+  #koldtbord-header-rediger:focus {
+    color: black;
+    background-color: transparent;
+    box-shadow: 0px 0px 4px #0f5094; }
+
+.sub-description {
+  margin-top: -10px; }
+
+.koldtbord-descriptions {
+  font-size: 1.4em; }
+
+.koldtbord-divider {
+  text-align: center;
+  font-size: 0.9em; }
+
+.koldtbord-table {
+  background: white;
+  border-radius: 3px;
+  border: 1px #e6e6e6 solid;
+  transition: all 1s ease; }
+  .koldtbord-table:hover {
+    border: 1px #7db6f2 solid; }
+
+.koldtbord-table > th, td {
+  padding: 3px 15px 3px 15px; }

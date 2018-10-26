@@ -103,7 +103,91 @@
               >{{ item.description }}</textarea>
             </div>
 
-            {% include "submit-buttons.html" %}
+                    <!-- BUTTONS -->
+                    <div class="row">
+
+                      <!-- SUBMIT -->
+                      <button
+                        class="
+                                btn
+                                btn-link
+                                hidden
+                                submit-button
+                              "
+                        type="submit"
+                        >submit
+                      </button>
+
+                      <!-- RESET -->
+                      <button
+                        class="
+                                btn
+                                btn-link
+                                hidden
+                                reset-button
+                              "
+                        type="reset"
+                        >reset
+                      </button>
+
+                      <!-- REDIRECTION PURPOSES -->
+                      <input type="text" name="type" value="{{ type }}"  style="display: none;"/>
+
+                    </form>
+
+
+                    <!-- DELETE -->
+                    <!-- DELETE -->
+                    <!-- DELETE -->
+                    <form action="{{ url_for('delete_catering', id=item.id )}}" method="post" class="delete-form">
+
+                      <!-- SLETT BUTTON -->
+                      <button
+                        class="
+                                btn
+                                btn-link
+                                hidden
+                                delete-button
+                              "
+                        type="button"
+                        >slett
+                      </button>
+
+                      <p class="usure">sikker?</p>
+
+                      <!-- YES -->
+                      <button
+                        class="
+                                btn
+                                btn-link
+                                yes-no
+                              "
+                        value="yes"
+                        >Ja
+                      </button>
+
+
+                      <!-- NO -->
+                      <button
+                        class="
+                                btn
+                                btn-link
+                                yes-no
+                                no
+                              "
+                        >Nei
+                      </button>
+
+                      <!-- REDIRECTION PURPOSES -->
+                      <input
+                        type="text"
+                        name="type"
+                        value="{{ type }}"
+                        style="display: none;"
+                      />
+
+                    </form>
+
           </div>
 
 
@@ -135,7 +219,7 @@
   </button>
 
 
-  <form class="add-items-form" action="{{ url_for('new') }}" method="post" style="display: none;">
+  <form class="add-items-form" action="{{ url_for('new_catering') }}" method="post" style="display: none;">
 
     <div class="form-group row">
 
@@ -162,7 +246,7 @@
                 "
           type="text"
           required
-          name="price"
+          name="price_one"
           placeholder="Pris"
         />
       </div>

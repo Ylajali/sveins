@@ -1,0 +1,57 @@
+/* COLORS */
+/* COLORS */
+/* COLORS */
+/* COLORS */
+/*
+$grape: #7023BE;
+$azure: #0e429e;
+*/
+/* FONTS */
+/* FONTS */
+/* FONTS */
+/* FONTS */
+/* SIZES */
+/* SIZES */
+/* SIZES */
+/* SIZES */
+/* TOOLS */
+/* TOOLS */
+/* TOOLS */
+/* TOOLS */
+/* INPUTS */
+/* INPUTS */
+/* INPUTS */
+/* INPUTS */
+/* TEXTS */
+/* TEXTS */
+/* TEXTS */
+/* TEXTS */
+/* BUTTONS */
+/* BUTTONS */
+/* BUTTONS */
+/* BUTTONS */
+/* INCLUDES */
+.grill-header {
+  font-family: "Unica One", cursive;
+  font-size: 1.6em;
+  color: black; }
+
+.grill-price {
+  font-family: "Unica One", cursive;
+  font-size: 1.2em;
+  font-style: italic;
+  text-align: right;
+  color: black; }
+
+.grill-subheader {
+  font-family: "Reenie Beanie", cursive;
+  font-size: 1.7em;
+  color: black;
+  margin-top: 10px;
+  line-height: 1em; }
+
+/* BIG SCREEN ONLY */
+@media screen and (min-width: 960px) {
+  .grill-div:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 7px; } }

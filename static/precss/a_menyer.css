@@ -1,0 +1,197 @@
+/* COLORS */
+/* COLORS */
+/* COLORS */
+/* COLORS */
+/*
+$grape: #7023BE;
+$azure: #0e429e;
+*/
+/* FONTS */
+/* FONTS */
+/* FONTS */
+/* FONTS */
+/* SIZES */
+/* SIZES */
+/* SIZES */
+/* SIZES */
+/* TOOLS */
+/* TOOLS */
+/* TOOLS */
+/* TOOLS */
+/* INPUTS */
+/* INPUTS */
+/* INPUTS */
+/* INPUTS */
+/* TEXTS */
+/* TEXTS */
+/* TEXTS */
+/* TEXTS */
+/* BUTTONS */
+/* BUTTONS */
+/* BUTTONS */
+/* BUTTONS */
+/* INCLUDES */
+/* INCLUDES */
+/* INCLUDES */
+/* INCLUDES */
+.headtitle {
+  font-family: "Unica One", cursive;
+  font-size: 3em;
+  color: #0f5094;
+  cursor: default;
+  margin-top: 18px;
+  /*
+  width: max-content;
+  */
+  margin-right: auto;
+  margin-left: auto; }
+
+.meny-link {
+  border-top: 1px black solid;
+  font-family: "Unica One", cursive;
+  color: black;
+  font-size: 1.1em;
+  padding: 12px 17px;
+  margin: auto;
+  margin-bottom: 60px; }
+
+.meny-name {
+  font-family: "Unica One", cursive;
+  font-size: 1.6em;
+  color: black; }
+
+.meny-price {
+  font-family: "Unica One", cursive;
+  font-size: 1.2em;
+  font-style: italic;
+  text-align: right;
+  color: black; }
+
+.meny-name-pizza {
+  font-family: "Unica One", cursive;
+  font-size: 1.6em;
+  color: black; }
+
+.meny-price-pizza {
+  font-family: "Unica One", cursive;
+  font-size: 1.2em;
+  font-style: italic;
+  text-align: right;
+  color: black; }
+
+/* SUB-NAV */
+/* SUB-NAV */
+/* SUB-NAV */
+/* SUB-NAV */
+.subnav-container {
+  margin-bottom: 20px; }
+
+.meny-link:hover {
+  color: #0f5094; }
+
+/* MENU */
+/* MENU */
+/* MENU */
+/* MENU */
+#dagens {
+  margin-bottom: 30px;
+  text-align: center;
+  font-family: "Unica One", cursive;
+  font-size: 1.6em;
+  color: black; }
+
+#dagens-description {
+  font-family: "Reenie Beanie", cursive;
+  font-size: 1.7em;
+  color: black;
+  margin-top: 10px;
+  line-height: 1em; }
+
+.headers {
+  transition: 200ms; }
+
+.meny-description {
+  font-family: "Reenie Beanie", cursive;
+  font-size: 1.7em;
+  color: black;
+  margin-top: 10px;
+  line-height: 1em;
+  width: 100%;
+  padding-top: 5px;
+  font-size: 1.2em; }
+
+/* PIZZA MENU */
+/* PIZZA MENU */
+.meny-name-pizza {
+  width: 30%; }
+
+.meny-price-pizza {
+  width: 70%;
+  text-align: right; }
+
+/* BIG SCREEN ONLY */
+/* BIG SCREEN ONLY */
+/* BIG SCREEN ONLY */
+/* BIG SCREEN ONLY */
+@media screen and (min-width: 960px) {
+  .subcontainer {
+    transition: all 300ms ease-in-out; }
+    .subcontainer:hover .headers {
+      color: #0f5094; }
+  .menu_table {
+    width: 90%;
+    margin: auto; } }
+
+/* SMALL SCREEN ONLY */
+/* SMALL SCREEN ONLY */
+/* SMALL SCREEN ONLY */
+/* SMALL SCREEN ONLY */
+@media screen and (max-width: 960px) {
+  .menu_table {
+    width: 100%; } }
+
+@media screen and (min-width: 768px) {
+  /* AFTER */
+  .meny-link:after {
+    content: '';
+    width: 65%;
+    height: 1px;
+    display: block;
+    background: transparent;
+    transition: all 300ms ease;
+    margin: auto;
+    position: relative;
+    bottom: -7px;
+    transition: all 300ms ease; }
+  .meny-link:hover:after {
+    bottom: -2px;
+    width: 80%;
+    background: rgba(15, 80, 148, 0.9); }
+  /* BEFORE */
+  .meny-link:before {
+    content: '';
+    width: 65%;
+    height: 1px;
+    display: block;
+    background: transparent;
+    transition: all 300ms ease;
+    margin: auto;
+    position: relative;
+    top: -7px;
+    transition: width 300ms ease, background .6 ease-in-out, top 300ms ease; }
+  .meny-link:hover:before {
+    top: -2px;
+    width: 80%;
+    background: rgba(15, 80, 148, 0.9); } }
+
+@media (max-width: 576px) {
+  .subnav-container {
+    margin: 0;
+    padding: 0; }
+  .meny-link, .active {
+    font-size: 1rem;
+    border-top: 0 none;
+    margin: 8px;
+    padding: 0; }
+  .active {
+    border-top: none; } }

@@ -1,0 +1,73 @@
+/* COLORS */
+/* COLORS */
+/* COLORS */
+/* COLORS */
+/*
+$grape: #7023BE;
+$azure: #0e429e;
+*/
+/* FONTS */
+/* FONTS */
+/* FONTS */
+/* FONTS */
+/* SIZES */
+/* SIZES */
+/* SIZES */
+/* SIZES */
+/* TOOLS */
+/* TOOLS */
+/* TOOLS */
+/* TOOLS */
+/* INPUTS */
+/* INPUTS */
+/* INPUTS */
+/* INPUTS */
+/* TEXTS */
+/* TEXTS */
+/* TEXTS */
+/* TEXTS */
+/* BUTTONS */
+/* BUTTONS */
+/* BUTTONS */
+/* BUTTONS */
+/* INCLUDES */
+/* INCLUDES */
+/* INCLUDES */
+/* INCLUDES */
+.tjenester-header {
+  font-family: "Unica One", cursive;
+  font-size: 1.6em;
+  color: black; }
+
+.tjenester-description {
+  font-family: "Reenie Beanie", cursive;
+  font-size: 1.7em;
+  color: black;
+  margin-top: 10px;
+  line-height: 1em; }
+
+.tjenester-price {
+  font-family: "Unica One", cursive;
+  font-size: 1.2em;
+  font-style: italic;
+  text-align: right;
+  color: black; }
+
+/* TEXTS */
+/* TEXTS */
+/* TEXTS */
+/* TEXTS */
+.tjenester-header {
+  text-align: center; }
+
+.services-description {
+  padding: 18px;
+  border-bottom: 1px black solid;
+  border-top: 1px black solid;
+  text-align: center;
+  margin-bottom: 5px; }
+
+.services-price {
+  font-style: normal;
+  margin-bottom: -2px;
+  font-size: 1.1em; }

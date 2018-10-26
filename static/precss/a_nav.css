@@ -1,0 +1,71 @@
+/* COLORS */
+/* COLORS */
+/* COLORS */
+/* COLORS */
+/*
+$grape: #7023BE;
+$azure: #0e429e;
+*/
+/* FONTS */
+/* FONTS */
+/* FONTS */
+/* FONTS */
+/* SIZES */
+/* SIZES */
+/* SIZES */
+/* SIZES */
+/* TOOLS */
+/* TOOLS */
+/* TOOLS */
+/* TOOLS */
+/* INPUTS */
+/* INPUTS */
+/* INPUTS */
+/* INPUTS */
+/* TEXTS */
+/* TEXTS */
+/* TEXTS */
+/* TEXTS */
+/* BUTTONS */
+/* BUTTONS */
+/* BUTTONS */
+/* BUTTONS */
+#sveins-logo {
+  width: 170px; }
+
+.main-nav {
+  font-size: 1.1em;
+  font-family: "Unica One", cursive;
+  /*
+  font-family: TimesNewRoman,Times New Roman,Times,Baskerville,Georgia,serif;
+  */
+  color: black;
+  transition: all 100ms ease-in; }
+  .main-nav:hover {
+    color: #0f5094; }
+
+.separator {
+  padding: .5rem .2rem;
+  cursor: default; }
+
+@media (max-width: 768px) {
+  .navbar-toggler {
+    position: absolute;
+    top: .7rem;
+    right: .5rem; } }
+
+@media (max-width: 576px) {
+  #sveins-logo {
+    width: 13rem; } }
+
+@media screen and (min-width: 768px) {
+  .main-nav:after {
+    content: '';
+    width: 0px;
+    height: 1px;
+    display: block;
+    background: #115dab;
+    transition: 300ms;
+    margin: auto; }
+  .main-nav:hover:after {
+    width: 100%; } }

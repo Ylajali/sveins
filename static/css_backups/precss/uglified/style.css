@@ -1,0 +1,555 @@
+/*
+$azure: #054ec6;
+$azure: #4286f4;
+$azure: #7023BE;
+*/
+
+body {
+  height: 100%;
+  margin: 0;
+  background-repeat: repeat;
+  background-image: url("../../../../../../static/img/ep_naturalblack_lighter.png");
+}
+
+* {
+  color: #cec6c8;
+}
+
+th {
+  width: 100%;
+}
+
+* {
+  color: #cec6c8;
+}
+
+a {
+  text-decoration: none;
+  color: #cec6c8;
+}
+
+a:hover {
+  color: #003aa0;
+}
+
+.nopadding {
+  margin: 0;
+  padding: 0;
+}
+
+.fill {
+  margin: 0 auto;
+  min-width: 100%;
+  min-height: 100%;
+  height: 100%;
+  padding: 0;
+}
+
+.lg-only {
+  color: #003aa0;
+}
+
+@media screen and (min-width: 960px) {
+  .lg-only {
+    display: initial;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .lg-only {
+    display: none;
+  }
+}
+.koldtbord-header {
+  text-decoration: underline;
+}
+
+.koldtbord-price {
+  text-decoration: underline;
+  text-align: right;
+}
+
+.koldtbord-name {
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+.koldtbord-desc {
+  font-style: italic;
+}
+/*
+$azure: #054ec6;
+$azure: #4286f4;
+$azure: #7023BE;
+*/
+
+#footer-container {
+  background-color: rgba(0, 0, 0, 0.6);
+  margin-top: 200px;
+  border-top: 1px gray solid;
+}
+
+#footer-contact > li {
+  color: #cec6c8;
+  padding: 5px;
+}
+
+.social-media-button {
+  text-align: center;
+}
+
+#facebook-icon {
+  width: 9%;
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  #facebook-icon {
+    width: 50px;
+    text-align: center;
+  }
+}
+
+.footer-copyright {
+  border-top: 1px #272727 solid;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Lager plass mellom footer og content */
+
+.container {
+  min-height: 580px;
+}
+/*
+$azure: #054ec6;
+$azure: #4286f4;
+$azure: #7023BE;
+*/
+
+#navbar {
+  width: 80%;
+  height: 23px;
+}
+
+#navbar ul {
+  list-style-type: none;
+}
+
+#navbar li {
+  float: left;
+}
+
+#navbar li a {
+  font-weight: bold;
+}
+
+.col-lg-6 > img {
+  padding: 0;
+  margin: 0;
+  width: 2000px;
+}
+
+@media screen and (min-width: 900px) {
+  #index-logo {
+    margin-top: 2%;
+    width: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  #index-logo {
+    margin-top: 10%;
+    width: 95%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.index-container {
+  width: 95%;
+  display: block;
+  margin: 0 auto;
+}
+
+.index-col {
+  margin-top: 50px;
+}
+
+.index-card {
+  background-color: black;
+  height: 500px;
+  margin: -16px;
+  border: 1px black solid;
+  overflow: hidden;
+  line-height: 500px;
+  /*
+  border: 2px black solid;
+  */
+  text-align: center;
+}
+
+.inner-index-card {
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  background-size: cover;
+  background-position: center;
+  transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+}
+
+.inner-index-card:hover {
+  transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  cursor: pointer;
+}
+
+.index-link {
+  width: 100%;
+  line-height: normal;
+  /*
+  background-image: url("/static/img/ep_naturalblack.png");
+  */
+  background-color: black;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 200%;
+  transition: all 1.5s;
+}
+
+.inner-index-card:hover .index-link {
+  font-size: 240%;
+}
+
+#index-meny {
+  background-image: url("sveins1.jpg");
+}
+
+#index-catering {
+  background-image: url("sveins3_re.jpg");
+}
+
+#index-tjenester {
+  background-image: url("sveins8.jpg");
+}
+
+#index-kontakt {
+  background-image: url("sveins6.jpg");
+}
+
+.index-items {
+  font-style: italic;
+  font-weight: bold;
+  font-size: 120%;
+}
+/*
+$azure: #054ec6;
+$azure: #4286f4;
+$azure: #7023BE;
+*/
+
+.kontakt-title {
+  margin-top: 18px;
+  margin-bottom: 40px;
+  font-family: "Cinzel", serif;
+  font-size: 3em;
+  color: #003aa0;
+}
+
+.kontakt-liste {
+  list-style: none;
+  padding: 0px;
+  color: #cec6c8;
+}
+
+.kontakt-info {
+  padding-bottom: 80px;
+}
+
+#facebook-icon-contact {
+  width: 50px;
+}
+
+.openings {
+  padding-bottom: 80px;
+}
+
+#map {
+  padding: 0px;
+  margin: 0px;
+  height: 400px;
+  border: 1px black solid;
+}
+
+.kontakt-skjema {
+  padding: 30px;
+  padding-bottom: 50px;
+  padding-top: 0px;
+}
+
+.kontakt-skjema > form > input {
+  margin-bottom: 5px;
+  border-radius: 2px;
+  background-image: url("../../../../../../static/img/ep_naturalblack.png");
+  color: #cec6c8;
+}
+
+.kontakt-skjema > form > input:focus {
+  color: #cec6c8;
+}
+
+.kontakt-skjema > form > textarea {
+  background-image: url("../../../../../../static/img/ep_naturalblack.png");
+  color: #cec6c8;
+}
+
+.kontakt-skjema > form > textarea:focus {
+  color: #cec6c8;
+}
+
+.kontakt-skjema > form > button {
+  margin-top: 5px;
+  border-radius: 0px;
+  width: 30%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #cec6c8;
+  color: black;
+  border: 1px black solid;
+}
+
+.kontakt-skjema > form > button:hover {
+  background-color: #b2aeb0;
+  color: black;
+  border: 1px black solid;
+}
+
+.kontakt-skjema > form > button:active {
+  background-color: red;
+}
+
+.head-kontakt {
+  margin-bottom: 500px;
+}
+/*
+$azure: #054ec6;
+$azure: #4286f4;
+$azure: #7023BE;
+*/
+
+/* Avstand fra tittel til navbar */
+
+.headtitle {
+  margin-top: 18px;
+  font-family: "Cinzel", serif;
+  font-size: 3em;
+  color: #003aa0;
+}
+
+/* Avstand fra subnav til menyen */
+
+.headmenu {
+  margin-bottom: 20px;
+}
+
+.meny-link {
+  font-family: "Cinzel", serif;
+  color: #cec6c8;
+  font-size: 1.1em;
+}
+
+.meny-link:hover {
+  color: #003aa0;
+  text-decoration: underline;
+}
+
+#dagens {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* Avstand mellom hvert item */
+
+.menu_div {
+  padding: 10px 5px;
+  margin-bottom: 10px;
+  border: 1px transparent solid;
+  background-color: transparent;
+  -webkit-transition: all 300ms ease-in;
+  -moz-transition: all 300ms ease-in;
+  -o-transition: all 300ms ease-in;
+  transition: all 300ms ease-in;
+}
+
+@media screen and (min-width: 960px) {
+  .menu_table {
+    width: 90%;
+    margin: auto;
+  }
+
+  .menu_div:hover {
+    background-color: rgba(0, 0, 0, 0.25);
+    border-radius: 4px;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .menu_table {
+    width: 100%;
+  }
+}
+
+.meny-item {
+  font-family: "Cinzel", serif;
+}
+
+.meny-name,
+.meny-name-pizza {
+  font-family: "Cinzel", serif;
+  font-size: 1.3em;
+  width: 100%;
+  border-bottom: 1px #cec6c8 solid;
+  padding-bottom: 5px;
+}
+
+.meny-price,
+.meny-price-pizza {
+  font-family: "Cinzel", serif;
+  font-size: 1.1em;
+  font-style: italic;
+  width: 100%;
+  border-bottom: 1px #cec6c8 solid;
+}
+
+.meny-name-pizza {
+  width: 30%;
+}
+
+.meny-price-pizza {
+  width: 70%;
+  text-align: right;
+}
+
+.meny-description {
+  font-family: "Caveat", cursive;
+  font-size: 1.4em;
+  padding-top: 5px;
+  font-weight: 100;
+  width: 100%;
+}
+/*
+$azure: #054ec6;
+$azure: #4286f4;
+$azure: #7023BE;
+*/
+
+#sveins-logo {
+  width: 170px;
+}
+
+.main-nav {
+  font-size: 1em;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  color: #cec6c8;
+  animation: hover-colors 5s;
+}
+
+.main-nav:hover {
+  color: #003aa0;
+  text-decoration: underline;
+}
+
+@keyframes hover-colors {
+  0% {
+    color: #003aa0;
+  }
+
+  100% {
+    color: #7023BE;
+  }
+}
+
+.separator {
+  display: block;
+  padding: .5rem .2rem;
+  cursor: default;
+}
+/*
+$azure: #054ec6;
+$azure: #4286f4;
+$azure: #7023BE;
+*/
+
+.editmenu {
+  color: #cec6c8;
+  font-family: 'K2D', sans-serif;
+  border-radius: 0px;
+}
+
+.edit_form {
+  margin-bottom: 2px;
+}
+
+.activemenu {
+  color: #cec6c8;
+  font-family: 'K2D', sans-serif;
+  border-radius: 0px;
+  background-image: url("../../../../../../static/img/ep_naturalblack.png");
+  border: 1px #cec6c8 solid;
+}
+
+.activemenu:focus,
+.activemenu:active {
+  color: #cec6c8;
+  background-image: url("../../../../../../static/img/ep_naturalblack.png");
+}
+/*
+$azure: #054ec6;
+$azure: #4286f4;
+$azure: #7023BE;
+*/
+
+.tjenester-container {
+  margin-bottom: 25px;
+  padding-bottom: 25px;
+}
+
+.tjenester {
+  padding: 10px 20px;
+}
+
+.tjenester-header {
+  font-family: "Cinzel", serif;
+  font-size: 1.3em;
+  text-align: center;
+}
+
+.tjenester-description {
+  padding: 18px;
+  border-bottom: 1px #cec6c8 solid;
+  border-top: 1px #cec6c8 solid;
+  margin-bottom: 5px;
+  white-space: pre-wrap;
+  font-family: "Caveat", cursive;
+  font-family: "Caveat", cursive;
+  font-size: 1.4em;
+  padding-top: 5px;
+  font-weight: 100;
+}
+
+.tjenester-price {
+  font-family: "Cinzel", serif;
+  margin: 0px;
+  text-align: left;
+}

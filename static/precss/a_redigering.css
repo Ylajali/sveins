@@ -1,0 +1,128 @@
+/* COLORS */
+/* COLORS */
+/* COLORS */
+/* COLORS */
+/*
+$grape: #7023BE;
+$azure: #0e429e;
+*/
+/* FONTS */
+/* FONTS */
+/* FONTS */
+/* FONTS */
+/* SIZES */
+/* SIZES */
+/* SIZES */
+/* SIZES */
+/* TOOLS */
+/* TOOLS */
+/* TOOLS */
+/* TOOLS */
+/* INPUTS */
+/* INPUTS */
+/* INPUTS */
+/* INPUTS */
+/* TEXTS */
+/* TEXTS */
+/* TEXTS */
+/* TEXTS */
+/* BUTTONS */
+/* BUTTONS */
+/* BUTTONS */
+/* BUTTONS */
+/* INCLUDES */
+/* INCLUDES */
+/* INCLUDES */
+/* INCLUDES */
+.edit-name {
+  font-family: "Unica One", cursive;
+  font-size: 1.6em;
+  color: black; }
+
+.edit-price {
+  font-family: "Unica One", cursive;
+  font-size: 1.2em;
+  font-style: italic;
+  text-align: right;
+  color: black; }
+
+.edit-description {
+  font-family: "Reenie Beanie", cursive;
+  font-size: 1.7em;
+  color: black;
+  margin-top: 10px;
+  line-height: 1em; }
+
+.edit-buttons {
+  font-size: 1em;
+  color: black;
+  background-color: transparent;
+  border: 1px black solid;
+  border-radius: 2px;
+  font-family: 'Roboto',sans-serif;
+  transition: all 0.2s; }
+  .edit-buttons:hover {
+    background-color: black;
+    color: white; }
+  .edit-buttons:active {
+    background-color: white;
+    color: black;
+    box-shadow: 0px 0px 7px #0f5094; }
+  .edit-buttons:focus {
+    color: black;
+    background-color: transparent;
+    box-shadow: 0px 0px 4px #0f5094; }
+
+.add-button {
+  font-size: 1em;
+  color: black;
+  background-color: transparent;
+  border: 1px black solid;
+  border-radius: 2px;
+  font-family: 'Roboto',sans-serif;
+  transition: all 0.2s; }
+  .add-button:hover {
+    background-color: black;
+    color: white; }
+  .add-button:active {
+    background-color: white;
+    color: black;
+    box-shadow: 0px 0px 7px #0f5094; }
+  .add-button:focus {
+    color: black;
+    background-color: transparent;
+    box-shadow: 0px 0px 4px #0f5094; }
+
+/* INPUTS */
+/* INPUTS */
+/* INPUTS */
+/* INPUTS */
+.edit-price {
+  text-align: left; }
+
+/* BUTTONS */
+/* BUTTONS */
+/* BUTTONS */
+/* BUTTONS */
+.edit-buttons {
+  height: 40px;
+  width: 70px; }
+
+.delete-button {
+  color: #da3f3f; }
+  .delete-button:hover {
+    color: #961d1d; }
+
+.add-button {
+  display: block;
+  margin: auto;
+  font-size: 2em;
+  height: 65px; }
+
+/* MISC */
+/* MISC */
+/* MISC */
+/* MISC */
+.usure {
+  display: none;
+  color: black; }

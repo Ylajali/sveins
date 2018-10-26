@@ -28,22 +28,20 @@
     {% endfor %}
 
 
-    <li class="nav-item">
-      <a class="nav-link meny-link" href="{{ url_for('rediger_tjenester') }}">Tjenester</a>
-    </li>
+
   </ul>
 
 
   <div class="row">
     {% for item in items %}
-    <!-- CATERING EDIT FORM -->
-    <!-- CATERING EDIT FORM -->
-    <!-- CATERING EDIT FORM -->
+    <!--  EDIT FORM -->
+    <!--  EDIT FORM -->
+    <!--  EDIT FORM -->
     <div class="col-lg-6 subcontainer">
 
 
       <!-- INPUTS -->
-      <form action="{{ url_for('edit_catering', id=item.id) }}" method="post">
+      <form action="{{ url_for('edit', id=item.id) }}" method="post">
 
 
         <div class="form-group row edit_form">

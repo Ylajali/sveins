@@ -31,6 +31,8 @@ Session(app)
 # Set up database
 engine = create_engine("postgres://ianuevwzbuutrj:42354bdc367180a784f10bd07a57fafb669c4e711515371f4b1f1c9f14a0882a@ec2-54-75-239-237.eu-west-1.compute.amazonaws.com:5432/d9i63cog43kchr")
 db = scoped_session(sessionmaker(bind=engine))
+# Get Secret key
+app.config['SECRET_KEY'] = os.getenv("SECRET_KEY")
 
 # GLOBALS
 # GLOBALS
@@ -157,7 +159,9 @@ def logout():
 @app.route("/redigering/<item>")
 def redigering(item):
     if 'username' in session and session['username']:
+
         find_admin = db.execute("SELECT * FROM sveins WHERE name = :name", {"name": session['username']}).fetchone()
+
         items = db.execute("SELECT * FROM menus WHERE type = :item order by id asc", {"item":item})
         type = item
 
@@ -168,11 +172,14 @@ def redigering(item):
 # SEND EDIT
 @app.route("/edit/<id>", methods=["POST"])
 def edit(id):
+
     name = request.form.get("name")
     price = request.form.get("price")
     description = request.form.get("description")
     type = request.form.get("type")
+
     db.execute("UPDATE menus SET name = :name, price = :price, description = :description WHERE id = :id", {"name": name, "price": price, "description": description, "id": id})
+
     db.commit();
     return redirect('/redigering/' + type)
 # DELETE ITEM MENU
