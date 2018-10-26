@@ -52,16 +52,16 @@ app.jinja_env.globals.update(find_id_grill=find_id_grill)
 # INDEX
 @app.route("/")
 def index():
-    return render_template("index.html", title="Home")
+    return render_template("index.html", title="Framsiden")
 
 
 # KONTAKT OSS
 # KONTAKT OSS
 # KONTAKT OSS
 # KONTAKT OSS
-@app.route("/kontakt")
+@app.route("/kontakt-oss")
 def kontakt():
-    return render_template("kontakt.html", title="Kontakt oss")
+    return render_template("kontakt.html", title="Kontakt Oss", header="Kontakt Oss")
 
 # TJENESTER
 # TJENESTER
@@ -70,7 +70,7 @@ def kontakt():
 @app.route("/tjenester")
 def tjenester():
     services = db.execute("SELECT * FROM tjenester order by id asc")
-    return render_template("tjenester.html", title="Tjenester", services=services)
+    return render_template("tjenester.html", title="Tjenester", header="Tjenester", services=services)
 
 # MENU
 # MENU
@@ -90,7 +90,7 @@ def find_item(item):
         dagens = None
 
     items = db.execute("SELECT * FROM menus WHERE type = :type order by id asc", {"type": item})
-    return render_template("menyer.html", items=items, dagens=dagens, type=item, title="Overtidsmat & Meny")
+    return render_template("menyer.html", items=items, dagens=dagens, type=item, title=item.capitalize() + " ― Overtidsmat & Meny", header="Overtidsmat & Meny")
 
 # CATERING
 # CATERING
@@ -101,19 +101,19 @@ def catering(type):
     if type == "koldtbord":
         headers = db.execute("SELECT * FROM koldtbord order by id asc")
         capitalize_type = type.capitalize()
-        return render_template("catering.html", headers=headers, type=type)
+        return render_template("catering.html", headers=headers, type=type, title=type.capitalize() + " ― Overtidsmat & Meny", header="Overtidsmat & Meny")
     else:
         types = db.execute("SELECT * FROM catering WHERE type = :type order by id asc", {"type": type})
-        return render_template("catering.html", types=types, type=type, title="Catering")
+        return render_template("catering.html", types=types, type=type,  title=type.capitalize() + " ― Catering", header="Catering")
 
 # GRILL
 # GRILL
 # GRILL
 # GRILL
-@app.route("/grill")
+@app.route("/grillmat")
 def grill():
     headers = db.execute("SELECT * FROM grill order by id asc")
-    return render_template("grill.html", title="Grill", headers=headers)
+    return render_template("grill.html", title="Grillmat", header="Grillmat", headers=headers)
 
 #####################################################################################
 

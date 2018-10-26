@@ -2082,13 +2082,13 @@ $azure: #0e429e;
 
 /* INCLUDES */
 
-.tjenester-header {
+.services-header {
   font-family: "Unica One", cursive;
   font-size: 1.6em;
   color: black;
 }
 
-.tjenester-description {
+.services-description {
   font-family: "Reenie Beanie", cursive;
   font-size: 1.7em;
   color: black;
@@ -2096,7 +2096,7 @@ $azure: #0e429e;
   line-height: 1em;
 }
 
-.tjenester-price {
+.services-price {
   font-family: "Unica One", cursive;
   font-size: 1.2em;
   font-style: italic;
@@ -2112,10 +2112,6 @@ $azure: #0e429e;
 
 /* TEXTS */
 
-.tjenester-header {
-  text-align: center;
-}
-
 .services-description {
   padding: 18px;
   border-bottom: 1px black solid;
@@ -2128,4 +2124,18 @@ $azure: #0e429e;
   font-style: normal;
   margin-bottom: -2px;
   font-size: 1.1em;
+}
+
+@media (max-width: 768px) {
+  .services-header {
+    text-align: center;
+  }
+
+  .services-price {
+    text-align: center;
+  }
+
+  .services-container {
+    margin-bottom: 5rem;
+  }
 }

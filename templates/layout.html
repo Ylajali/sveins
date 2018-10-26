@@ -13,7 +13,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>{% block title %}{{ title }}{% endblock %}</title>
+    <title>{% block title %}{{ title }}{% endblock %} | Sveins Grill | Darnmarksplass, Bergen</title>
 
     <!-- FONTS -->
 
@@ -79,9 +79,9 @@
           {% set navigation_bar = [
               ("/meny/middag", "/redigering/middag", 'Overtidsmat & Meny'),
               ("/catering/forretter", "/rediger_catering/forretter", 'Catering'),
-              ('/grill', "/rediger_grill", 'Grill'),
+              ('/grillmat', "/rediger_grill", 'Grillmat'),
               ('/tjenester', "/rediger_tjenester", 'Tjenester'),
-              ('/kontakt', "/kontakt", 'Kontakt oss')
+              ('/kontakt-oss', "/kontakt-oss", 'Kontakt oss')
             ] -%}
 
 
@@ -116,7 +116,7 @@
 
       <h1 align="center"
         class="headtitle">
-         <span class="lg-only">&#9830;</span> {{ title }} <span class="lg-only">&#9830;</span></h1>
+         <span class="lg-only">&#9830;</span> {{ header }} <span class="lg-only">&#9830;</span></h1>
 
       {% block body %}
       {% endblock %}
