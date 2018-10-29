@@ -96,14 +96,18 @@ $azure: #0e429e;
   z-index: -1;
   width: 100%;
   height: calc(100% + 100px);
-  background: linear-gradient(70deg, rgba(196, 74, 9, 0.8), rgba(213, 216, 57, 0.8));
+  background: linear-gradient(70deg, #0f5094, #d53e62);
   transform: scale(1.2);
-  background-size: 200% 100%; }
+  background-size: 150% 150%; }
 
-.index-header {
-  font-size: 10rem;
+@keyframes wave {}.index-header, .diamond-index {
+  font-size: 8em;
   color: white;
-  text-shadow: 2px 3px 0px #000000; }
+  text-shadow: 0px 2px 0px #000000, 1px 3px 0px #1b1b1b;
+  animation: wave 1s ease-in-out infinite alternate; }
+
+.diamond-index {
+  font-size: 0.3em; }
 
 .index-img {
   display: block;
@@ -136,8 +140,8 @@ $azure: #0e429e;
     border-radius: 2px;
     font-family: 'Roboto',sans-serif;
     transition: all 0.2s;
-    width: 90%;
-    height: 3rem;
+    width: 100%;
+    height: 10em;
     cursor: pointer;
     border: 1px white solid;
     color: white;
@@ -165,46 +169,15 @@ $azure: #0e429e;
     .index-buttons:focus {
       color: white;
       background-color: transparent;
-      box-shadow: 0px 0px 7px #d53e62; } }
-
-@media (max-width: 992px) {
-  .index-buttons {
-    font-size: 1em;
-    color: black;
-    background-color: transparent;
-    border: 1px black solid;
-    border-radius: 2px;
-    font-family: 'Roboto',sans-serif;
-    transition: all 0.2s;
-    height: 5rem;
-    cursor: pointer;
-    border: 1px white solid;
-    color: white;
-    transition: background-color 0.5s ease;
-    display: block;
-    margin: auto;
-    z-index: 2; }
-    .index-buttons:hover {
-      background-color: black;
-      color: white; }
-    .index-buttons:active {
-      background-color: white;
-      color: black;
-      box-shadow: 0px 0px 7px #0f5094; }
-    .index-buttons:focus {
-      color: black;
-      background-color: transparent;
-      box-shadow: 0px 0px 4px #0f5094; } }
+      box-shadow: 0px 0px 7px #d53e62; }
+  .index-img {
+    display: none; } }
 
 @media (max-width: 768px) {
-  #index-logo {
-    width: 100%;
-    display: block;
-    margin: 2em auto 1em auto;
-    padding: 5px; }
-  .index-header {
-    word-wrap: normal;
-    font-size: 7rem; }
+  .index-header, .diamond-index {
+    font-size: 6em; }
+  .index-img {
+    display: none; }
   .index-buttons {
     font-size: 1em;
     color: black;
@@ -213,7 +186,8 @@ $azure: #0e429e;
     border-radius: 2px;
     font-family: 'Roboto',sans-serif;
     transition: all 0.2s;
-    height: 5rem;
+    width: 100%;
+    height: 10em;
     cursor: pointer;
     border: 1px white solid;
     color: white;
@@ -248,11 +222,8 @@ $azure: #0e429e;
     width: 88%; }
   .index-image-container {
     display: block;
-    margin: 1em auto 100px auto; }
-  .index-img {
-    display: none; } }
+    margin: 1em auto 100px auto; } }
 
-@media (max-width: 576px) {
-  .index-header {
-    word-wrap: normal;
-    font-size: 5rem; } }
+@media (max-width: 768px) {
+  .index-header, .diamond-index {
+    font-size: 5em; } }
