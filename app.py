@@ -121,7 +121,13 @@ def catering(type):
     if type == "koldtbord":
         headers = db.execute("SELECT * FROM koldtbord order by id asc")
         capitalize_type = type.capitalize()
-        return render_template("catering.html", headers=headers, type=type, title=type.capitalize() + " ― Overtidsmat & Meny", header="Overtidsmat & Meny")
+        return render_template(
+            "catering.html", 
+            headers=headers, 
+            type=type, 
+            title=type.capitalize() + " ― Catering",           
+            header="Catering",
+            description="Vi har catering vettu. Trenger du catering til fest, eller sammenkomst av noe slag? På catering-menyen vår finner du forretter, hovedretter eller koldtbord; kanskje du vil ha snitter? Til slutt har vi dessert og kaker. Nei, du får se selv hva du vil ha.")
     else:
         types = db.execute("SELECT * FROM catering WHERE type = :type order by id asc", {"type": type})
         return render_template(
