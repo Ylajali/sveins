@@ -483,4 +483,4 @@ def send():
 # 404 404 404
 @app.errorhandler(404)
 def fant_ikke_siden(e):
-    return render_template('404.html', header="404! Fant ikke siden"), 404
+    return render_template('404.html', header="404! Fant ikke siden", title="404"), 404
