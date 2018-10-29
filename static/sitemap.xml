@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"> 
+
+<url><loc>http://sveinsgrill.herokuapp.com/</loc><changefreq>yearly</changefreq></url>
+<url><loc>http://sveinsgrill.herokuapp.com/meny/middag</loc><changefreq>yearly</changefreq></url>
+<url><loc>http://sveinsgrill.herokuapp.com/catering/forretter</loc><changefreq>yearly</changefreq></url>
+<url><loc>http://sveinsgrill.herokuapp.com/grillmat</loc><changefreq>yearly</changefreq></url>
+<url><loc>http://sveinsgrill.herokuapp.com/tjenester</loc><changefreq>yearly</changefreq></url>
+<url><loc>http://sveinsgrill.herokuapp.com/kontakt-oss</loc><changefreq>yearly</changefreq></url>
+<url><loc>http://sveinsgrill.herokuapp.com/meny/pizza</loc><changefreq>yearly</changefreq></url>
+<url><loc>http://sveinsgrill.herokuapp.com/meny/hamburger</loc><changefreq>yearly</changefreq></url>
+<url><loc>http://sveinsgrill.herokuapp.com/meny/diverse</loc><changefreq>yearly</changefreq></url>
+<url><loc>http://sveinsgrill.herokuapp.com/catering/hovedretter</loc><changefreq>yearly</changefreq></url>
+<url><loc>http://sveinsgrill.herokuapp.com/catering/snitter</loc><changefreq>yearly</changefreq></url>
+<url><loc>http://sveinsgrill.herokuapp.com/catering/dessert</loc><changefreq>yearly</changefreq></url>
+<url><loc>http://sveinsgrill.herokuapp.com/catering/kaker</loc><changefreq>yearly</changefreq></url>
+<url><loc>http://sveinsgrill.herokuapp.com/catering/koldtbord</loc><changefreq>yearly</changefreq></url>
+
+</urlset>

@@ -2,7 +2,7 @@ import os
 import requests
 import datetime
 
-from flask import Flask, session, render_template, request, redirect, escape, jsonify
+from flask import Flask, session, render_template, request, redirect, escape, jsonify, send_from_directory
 from flask_session import Session
 from sqlalchemy import create_engine
 from sqlalchemy.orm import scoped_session, sessionmaker
@@ -10,13 +10,18 @@ from flask_mail import Mail, Message
 from werkzeug.security import generate_password_hash, check_password_hash
 from datetime import datetime
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder='static', static_url_path='')
 
 # EMAIL
 # EMAIL
 # EMAIL
 # EMAIL
 
+
+@app.route('/robots.txt')
+@app.route('/sitemap.xml')
+def static_from_root():
+    return send_from_directory(app.static_folder, request.path[1:])
 
 # Configure session to use filesystem
 app.config["SESSION_PERMANENT"] = False
