@@ -44,7 +44,9 @@ $azure: #0e429e;
   width: max-content;
   */
   margin-right: auto;
-  margin-left: auto; }
+  margin-left: auto;
+  text-align: center;
+  text-shadow: 0px 2px 0px #ffffff, 1px 3px 0px #1b1b1b; }
 
 .kontakt-subtitle {
   font-family: "Unica One", cursive;

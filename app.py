@@ -52,7 +52,10 @@ app.jinja_env.globals.update(find_id_grill=find_id_grill)
 # INDEX
 @app.route("/")
 def index():
-    return render_template("index.html", title="Framsiden")
+    return render_template(
+        "index.html", 
+        title="Framsiden",
+        description="Sveins Grill er en liten og sjarmerende lokal kjenning på Danmarksplass. Hvis du trenger overtidsmat eller catering fikser vi begge deler. Hvis du leter etter noe mat på Danmarksplass må jo du bare komme innom da óg. Vi kan servere, levere og faktisk arrangere grillparty. Åpen mandag til fredag 11-19, men tar imot bestillinger for helgen.")
 
 
 # KONTAKT OSS
@@ -61,7 +64,11 @@ def index():
 # KONTAKT OSS
 @app.route("/kontakt-oss")
 def kontakt():
-    return render_template("kontakt.html", title="Kontakt Oss", header="Kontakt Oss")
+    return render_template(
+        "kontakt.html", 
+        title="Kontakt Oss", 
+        header="Kontakt Oss",
+        description="Ta gjerne kontakt på nummeret 991 01 756, eller skulle du sende email er det: sveinsgrill@gmail.com. Vi er åpen mandag til fredag 11-19, men tar bestillinger for helgen også. Addressen er Solheimsgaten 37, 5054, Bergen.")
 
 # TJENESTER
 # TJENESTER
@@ -70,7 +77,13 @@ def kontakt():
 @app.route("/tjenester")
 def tjenester():
     services = db.execute("SELECT * FROM tjenester order by id asc")
-    return render_template("tjenester.html", title="Tjenester", header="Tjenester", services=services)
+    return render_template(
+        "tjenester.html", 
+        title="Tjenester", 
+        header="Tjenester", 
+        services=services,
+        description="Har du planer om å arrangere noe greier? Vi kan hjelpe til med syngende kelnere, eller kanskje kokk? Har du bar på denne festen? Så fikser vi barkeeper, det er ikke noe problem. Skulle du finne på å ha et helt grillparty fikser vi jo det óg."
+        )
 
 # MENU
 # MENU
@@ -90,7 +103,14 @@ def find_item(item):
         dagens = None
 
     items = db.execute("SELECT * FROM menus WHERE type = :type order by id asc", {"type": item})
-    return render_template("menyer.html", items=items, dagens=dagens, type=item, title=item.capitalize() + " ― Overtidsmat & Meny", header="Overtidsmat & Meny")
+    return render_template(
+        "menyer.html", 
+        items=items, 
+        dagens=dagens, 
+        type=item, 
+        title=item.capitalize() + " ― Overtidsmat & Meny", 
+        header="Overtidsmat & Meny",
+        description="Trenger du eller dere overtidsmat? Eller kanskje du leter etter et Bergens-lokalt sted å sitte deg ned for noe mat? På overtidsmenyen finner du klassikere som pizza og hamburger. Hvis du er ute etter noe mer tradisjonelt lager vi også middager og diverse som karbonadesmørbrød.  Vi leverer på bestilling mandag til søndag.")
 
 # CATERING
 # CATERING
@@ -104,7 +124,13 @@ def catering(type):
         return render_template("catering.html", headers=headers, type=type, title=type.capitalize() + " ― Overtidsmat & Meny", header="Overtidsmat & Meny")
     else:
         types = db.execute("SELECT * FROM catering WHERE type = :type order by id asc", {"type": type})
-        return render_template("catering.html", types=types, type=type,  title=type.capitalize() + " ― Catering", header="Catering")
+        return render_template(
+            "catering.html", 
+            types=types, 
+            type=type,  
+            title=type.capitalize() + " ― Catering", 
+            header="Catering",
+            description="Vi har catering vettu. Trenger du catering til fest, eller sammenkomst av noe slag? På catering-menyen vår finner du forretter, hovedretter eller koldtbord; kanskje du vil ha snitter? Til slutt har vi dessert og kaker. Nei, du får se selv hva du vil ha.")
 
 # GRILL
 # GRILL
@@ -113,7 +139,12 @@ def catering(type):
 @app.route("/grillmat")
 def grill():
     headers = db.execute("SELECT * FROM grill order by id asc")
-    return render_template("grill.html", title="Grillmat", header="Grillmat", headers=headers)
+    return render_template(
+        "grill.html", 
+        title="Grillmat", 
+        header="Grillmat", 
+        headers=headers,
+        description="Vi heter jo tross alt Sveins Grill. Vi leverer og/eller serverer ferdige grillbord sånn at du slipper å tenke på det der. Liker du ikke ris eller potetsalat så er jo det bare å si i fra. ")
 
 #####################################################################################
 
@@ -444,3 +475,12 @@ def send():
     msg.body = body + '\n' + '\n' + "Navn: " + name + '\n' + "Email: " + email + '\n' + "Telefonnummer: " + number + '\n'
     mail.send(msg)
     return "Sent"
+
+
+# 404 404 404
+# 404 404 404
+# 404 404 404
+# 404 404 404
+@app.errorhandler(404)
+def fant_ikke_siden(e):
+    return render_template('404.html', header="404! Fant ikke siden"), 404

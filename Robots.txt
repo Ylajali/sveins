@@ -1,0 +1,3 @@
+User-agent:*
+ Disallow:
+ Sitemap: http://sveinsgrill.herokuapp.com/sitemap.xml

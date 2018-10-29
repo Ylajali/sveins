@@ -34,18 +34,6 @@ $azure: #0e429e;
 /* INCLUDES */
 /* INCLUDES */
 /* INCLUDES */
-.headtitle {
-  font-family: "Unica One", cursive;
-  font-size: 3em;
-  color: #0f5094;
-  cursor: default;
-  margin-top: 18px;
-  /*
-  width: max-content;
-  */
-  margin-right: auto;
-  margin-left: auto; }
-
 .meny-link {
   border-top: 1px black solid;
   font-family: "Unica One", cursive;

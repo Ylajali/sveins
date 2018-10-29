@@ -5,7 +5,7 @@
 
     <!-- FAVICON -->
 
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="shortcut icon" href="/favicon.ico">
 
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
@@ -14,6 +14,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>{% block title %}{{ title }}{% endblock %} | Sveins Grill | Darnmarksplass, Bergen</title>
+
+    <meta name=”description” content=”{{ description }}”>
+
 
     <!-- FONTS -->
 
@@ -115,8 +118,7 @@
     <div class="container">
 
 
-      <h1 align="center"
-        class="headtitle">
+      <h1 align="center" class="headtitle">
          <span class="lg-only">&#9830;</span> {{ header }} <span class="lg-only">&#9830;</span></h1>
 
       {% block body %}

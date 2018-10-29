@@ -30,6 +30,20 @@ $azure: #0e429e;
 /* BUTTONS */
 /* BUTTONS */
 /* BUTTONS */
+.headtitle {
+  font-family: "Unica One", cursive;
+  font-size: 3em;
+  color: #0f5094;
+  cursor: default;
+  margin-top: 18px;
+  /*
+  width: max-content;
+  */
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+  text-shadow: 0px 2px 0px #ffffff, 1px 3px 0px #1b1b1b; }
+
 body {
   background-repeat: repeat;
   background-image: url("/static/img/stardust_light.png");
@@ -76,9 +90,6 @@ body {
 /* GLOBALS */
 /* GLOBALS */
 /* HORZONTAL, VERTICAL, BLUR, COLOR */
-.headtitle {
-  text-shadow: 0px 2px 0px #ffffff, 1px 3px 0px #1b1b1b; }
-
 .hidden {
   display: none; }
 
@@ -126,6 +137,9 @@ a {
 /* DEFAULT CLASSES */
 /* DEFAULT CLASSES */
 /* DEFAULT CLASSES */
+.headtitle {
+  text-align: center; }
+
 .subcontainer {
   padding: 10px 5px;
   margin-bottom: 10px;

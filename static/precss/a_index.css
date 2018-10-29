@@ -43,6 +43,10 @@ $azure: #0e429e;
   margin: 3em auto 3em auto;
   padding: 5px; }
 
+#h1-index-logo {
+  margin: 0em;
+  padding: 0em; }
+
 /* BUTTONS */
 /* BUTTONS */
 /* BUTTONS */
@@ -95,6 +99,10 @@ $azure: #0e429e;
   background: linear-gradient(70deg, #0f5094, #d53e62);
   transform: scale(1.2);
   background-size: 150% 150%; }
+
+@keyframes wave {}.index-header {
+  font-size: 10rem;
+  animation: wave 1s ease-in-out infinite alternate; }
 
 .index-img {
   display: block;
