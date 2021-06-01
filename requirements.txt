@@ -19,6 +19,6 @@ pyvim==2.0.23
 requests==2.19.1
 six==1.11.0
 SQLAlchemy==1.2.12
-urllib3==1.23
+urllib3==1.26.5
 wcwidth==0.1.7
 Werkzeug==0.14.1
